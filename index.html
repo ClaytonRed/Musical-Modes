@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500&family=DM+Mono&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Scale Explorer</title>
+</head>
+
+<body>
+
+    <div class="container">
+        
+        <header>
+            <h1>Scale <em>Explorer</em></h1>
+            <p class="subtitle">Select a root note and mode to see the scale</p>
+        </header>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="root">Root note</label>
+                <select id="root">
+                    <option>C</option>
+                    <option>C# / Db</option>
+                    <option>D</option>
+                    <option>D# / Eb</option>
+                    <option>E</option>
+                    <option>F</option>
+                    <option>F# / Gb</option>
+                    <option>G</option>
+                    <option>G# / Ab</option>
+                    <option>A</option>
+                    <option>A# / Bb</option>
+                    <option>B</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="mode">Mode</label>
+                <select id="mode">
+                    <option value="0">Ionian (Major)</option>
+                    <option value="1">Dorian</option>
+                    <option value="2">Phrygian</option>
+                    <option value="3">Lydian</option>
+                    <option value="4">Mixolydian</option>
+                    <option value="5">Aeolian (Natural Minor)</option>
+                    <option value="6">Locrian</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="scale-card">
+            <div class="scale-header">
+                <div class="scale-title" id="scale-title"></div>
+                <div class="scale-formula" id="scale-formula"></div>
+            </div>
+            <div class="notes-row" id="notes-row"></div>
+        </div>
+
+        <div class="info-strip">
+            <div class="info-item">
+                <div class="info-label">Character</div>
+                <div class="info-value" id="info-character"></div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Relative major</div>
+                <div class="info-value accent" id="info-relative"></div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">Notes</div>
+                <div class="info-value" id="info-count">7</div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
